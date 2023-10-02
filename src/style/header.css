@@ -1,0 +1,41 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  /* background-color: rgb(238, 232, 232); */
+}
+
+.header-link_btn,
+.header-signup_btn {
+  font-weight: bolder;
+  letter-spacing: -1px;
+}
+
+.header-link_btn {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.header-navlink_btn {
+  font-size: 13px;
+  letter-spacing: -0.5px;
+}
+
+.header-signup_btn {
+  padding: 8px 25px;
+  border: 1.5px solid black;
+  border-radius: 20px;
+  transition: all 0.1s ease-in-out;
+}
+
+.header-signup_btn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
