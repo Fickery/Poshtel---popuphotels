@@ -32,3 +32,32 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* React Slick */
+
+.container {
+  /* background: #d0d1d3; */
+  max-width: 700px;
+  margin: 50px 0 50px 0;
+}
+
+.slick-slide img {
+  margin: auto;
+}
+
+.slider-img {
+  filter: grayscale(100%);
+}
+
+.slick-slide {
+  margin: 0 -100px;
+}
+
+.slick-track {
+  display: flex;
+  gap: 1rem;
+}
+
+.slick-list {
+  margin-left: -120px;
+}

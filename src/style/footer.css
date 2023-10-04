@@ -1,0 +1,81 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5vw;
+  background-color: black;
+  width: 100%;
+  padding: 125px 30px 50px 30px;
+  margin-top: 100px;
+  color: white;
+}
+
+.footer-subscribe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footer-slogan {
+  font-size: 1em;
+}
+
+.footer-slogan > h1 {
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.footer-slogan > p {
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.footer-cta_sub {
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.footer-input_container > input {
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+::placeholder > input {
+  color: rgb(201, 201, 201);
+  opacity: 1; /* Firefox */
+}
+
+.footer-input_container {
+  position: relative;
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+}
+
+.footer-trail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-trail > p {
+  font-size: 0.8em;
+}
+
+.footer-trail > ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  font-size: 0.75em;
+}

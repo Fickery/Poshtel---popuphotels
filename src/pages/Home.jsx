@@ -1,4 +1,5 @@
 import "../style/home.css";
+import SimpleSlider from "../components/SimpleSlider";
 
 export default function Home() {
   return (
@@ -88,6 +89,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SimpleSlider />
+
       <section className="home-partner">
         <div className="home-partner_text">
           <div className="home-partner_toptext">
@@ -138,12 +141,14 @@ export default function Home() {
             </p>
           </div>
           <div className="home-testimonial_bottomtext">
-            <p>
+            <p className="quote">
               "Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam, tempora ipsa! Perferendis hic quod veritatis."
             </p>
-            <h2>Lucile Perry</h2>
-            <p>Stayed in Stendans for 3 weeks</p>
+            <article>
+              <h2>Lucile Perry</h2>
+              <p>Stayed in Stendans for 3 weeks</p>
+            </article>
           </div>
         </div>
       </section>
@@ -231,49 +236,62 @@ export default function Home() {
           <div className="home-reserveblk_box">
             <span className="bold">$10,-</span>
             <span>/ a month</span>
-            <h1 className="reserveblk-title">Join the waiting list</h1>
-            <ul className="reserveblk-ul">
-              <li className="reserveblk-li">Get a priority to join</li>
-              <li className="reserveblk-li">Co-create with us</li>
-              <li className="reserveblk-li">Insider news</li>
-            </ul>
+
+            <div className="home-reserveblk-maintexts">
+              <h1 className="home-reserveblk-title">Join the waiting list</h1>
+              <ul className="home-reserveblk-ul">
+                <li className="home-reserveblk-li">Get a priority to join</li>
+                <li className="home-reserveblk-li">Co-create with us</li>
+                <li className="home-reserveblk-li">Insider news</li>
+              </ul>
+            </div>
+
             <button className="home-btn">apply</button>
           </div>
 
           <div className="home-reserveblk_box">
             <span className="bold">$44,-</span>
             <span>/ a month</span>
-            <h1 className="reserveblk-title">
-              A bed 14
-              <br />
-              days a Year
-            </h1>
-            <ul className="reserveblk-ul">
-              <li className="reserveblk-li">Bunkbed in paradise</li>
-              <li className="reserveblk-li">1 SDG Course</li>
-              <li className="reserveblk-li">Pledge to be active</li>
-            </ul>
+
+            <div className="home-reserveblk-maintexts">
+              <h1 className="home-reserveblk-title">
+                A bed 14
+                <br />
+                days a Year
+              </h1>
+              <ul className="home-reserveblk-ul">
+                <li className="home-reserveblk-li">Bunkbed in paradise</li>
+                <li className="home-reserveblk-li">1 SDG Course</li>
+                <li className="home-reserveblk-li">Pledge to be active</li>
+              </ul>
+            </div>
+
             <button className="home-btn">apply</button>
           </div>
 
           <div className="home-reserveblk_box1">
             <span className="bold">$444,-</span>
             <span>/ a month</span>
-            <h1 className="reserveblk-title">
+            <h1 className="home-reserveblk-title">
               Designer Villa 3 Weeks Per Year
             </h1>
-            <ul className="reserveblk-ul">
-              <li className="reserveblk-li">Villa in Paradise</li>
-              <li className="reserveblk-li">Sleeps up to 6 people</li>
-              <li className="reserveblk-li">1x massage per day</li>
-              <li className="reserveblk-li">1x speed cleaning</li>
-              <li className="reserveblk-li">1x functional workout</li>
-            </ul>
-            <button className="home-btn">apply</button>
+
+            <div className="home-reserveblk-maintexts">
+              <ul className="home-reserveblk-ul">
+                <li className="home-reserveblk-li">Villa in Paradise</li>
+                <li className="home-reserveblk-li">Sleeps up to 6 people</li>
+                <li className="home-reserveblk-li">1x massage per day</li>
+                <li className="home-reserveblk-li">1x speed cleaning</li>
+                <li className="home-reserveblk-li">1x functional workout</li>
+              </ul>
+            </div>
+
+            <button className="home-btn" id="home-btn_1">
+              apply
+            </button>
           </div>
         </section>
       </div>
-      <footer>Temp footer</footer>
     </div>
   );
 }

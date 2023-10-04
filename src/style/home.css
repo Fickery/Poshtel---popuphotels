@@ -26,6 +26,17 @@
   color: white;
 }
 
+#home-btn_1 {
+  border: 1.5px solid white;
+  background-color: black;
+  color: white;
+}
+
+#home-btn_1:hover {
+  background-color: white;
+  color: black;
+}
+
 .home-main_title {
   font-size: 8em;
   font-weight: 700;
@@ -176,7 +187,13 @@
 }
 
 .home-testimonial_bottomtext {
+  display: grid;
+  gap: 15px;
   font-size: 0.75em;
+}
+
+.quote {
+  font-size: 1em;
 }
 
 /*Members*/
@@ -261,6 +278,9 @@
 }
 
 .home-reserveblk_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: left;
   border: 2px solid black;
   padding: 20px;
@@ -275,33 +295,25 @@
   background-color: black;
 }
 
-.reserveblk-title {
+.home-reserveblk-title {
   max-width: 80%;
   font-size: 1.5em;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.reserveblk-ul {
+.home-reserveblk-ul {
   margin-bottom: 20px;
 }
 
-.reserveblk-li {
+.home-reserveblk-li {
   font-size: 0.8em;
 }
 
-.reserveblk-li::before {
+.home-reserveblk-li::before {
   content: "*";
   display: inline-block;
   margin-right: 5px; /* Adjust the spacing as needed */
 }
 
 /*Temp footer*/
-
-footer {
-  background-color: black;
-  width: 100%;
-  padding: 80px;
-  margin-top: 100px;
-  color: white;
-}
