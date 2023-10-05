@@ -52,6 +52,16 @@ footer {
   opacity: 1; /* Firefox */
 }
 
+input {
+  font-weight: 700;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+  color: white;
+}
+
 .footer-input_container {
   position: relative;
 }

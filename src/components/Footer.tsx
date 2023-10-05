@@ -1,7 +1,26 @@
 import "../style/footer.css";
 import { IoArrowForwardOutline } from "react-icons/io5";
+import { useState } from "react";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Submitted email", email);
+    alert("Thank you for subscribing!");
+    setEmail("");
+  };
+
   return (
     <footer>
       <div className="footer-subscribe">
@@ -16,10 +35,20 @@ export default function Footer() {
             <br />
             subscribe to our newsletter
           </p>
-          <div className="footer-input_container">
-            <input type="text" placeholder="Your email" />
-            <IoArrowForwardOutline className="arrow-icon" />
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="footer-input_container">
+              <input
+                name="email"
+                type="email"
+                placeholder={isFocused ? "" : "Your email"}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              <IoArrowForwardOutline className="arrow-icon" />
+            </div>
+          </form>
         </div>
       </div>
 

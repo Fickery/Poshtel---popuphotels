@@ -1,25 +1,33 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Hotels from "./pages/Hotels";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import Hotels from "./pages/Hotel";
+import HotelDetail from "./pages/HotelDetail";
 import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
-import Footer from "./components/Footer";
+import Members from "./pages/Members";
+import Layout from "./components/Layout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="hotels" element={<Hotels />} />
+      <Route path="hotels/:id" element={<HotelDetail />} />
+      <Route path="locations" element={<Locations />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="members" element={<Members />} />
+    </Route>,
+  ),
+);
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="hotels" element={<Hotels />} />
-        <Route path="locations" element={<Locations />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

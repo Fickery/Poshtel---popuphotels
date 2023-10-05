@@ -1,7 +1,27 @@
 import "../style/home.css";
 import SimpleSlider from "../components/SimpleSlider";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 550,
+  bgcolor: "background.paper",
+  boxShadow: 24,
+  p: 2,
+};
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div className="home-main">
       <h1 className="home-main_title">Welcome to Stendans</h1>
@@ -84,8 +104,27 @@ export default function Home() {
               <p>Bedroom</p>
             </li>
           </ul>
-
-          <button className="home-btn">Get Spec Sheet</button>
+          <div>
+            <button onClick={handleOpen} className="home-btn">
+              Get Spec Sheet
+            </button>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Box sx={style}>
+                <Box id="modal-modal-description" sx={{ mt: 2 }}>
+                  <img
+                    src="https://www.pdffiller.com/preview/47/326/47326091/large.png"
+                    alt=""
+                    width="100%"
+                  />
+                </Box>
+              </Box>
+            </Modal>
+          </div>
         </div>
       </section>
 
@@ -182,7 +221,9 @@ export default function Home() {
             <p className="home-member_name">Lillie Jackson</p>
           </div>
         </div>
-        <button className="home-btn">See all members</button>
+        <Link className="home-btn" to="/members">
+          See all members
+        </Link>
       </div>
 
       <img
