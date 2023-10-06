@@ -1,13 +1,19 @@
+import { Link, useLoaderData } from "react-router-dom";
 import { getHotels } from "../mirage/api";
-import { Link, Search } from "react-router-dom";
+
+export function loader({ params }) {
+  return getHotels(params.id);
+}
 
 export default function HotelDetail() {
+  const hotel = useLoaderData();
+
   return (
     <>
-      <Link to={`..${search}`} relative="path" className="back-button">
-        &larr; <span>Back to {type} vans</span>
+      <Link to="/hotels" relative="path" className="back-button">
+        &larr; <span>Back to all hotels</span>
       </Link>
-      <h1>this is hotel detail</h1>
+      <h1>this is {hotel.name} detail</h1>
     </>
   );
 }

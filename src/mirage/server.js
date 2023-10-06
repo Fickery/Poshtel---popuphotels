@@ -1,4 +1,4 @@
-import { createServer, Model } from "miragejs";
+import { createServer, Model, Response } from "miragejs";
 
 let server = () => {
   return createServer({
@@ -85,7 +85,12 @@ let server = () => {
     routes() {
       this.namespace = "api";
 
-      this.get("/hotels", (schema) => {
+      this.get("/hotels", (schema, request) => {
+        return schema.hotels.all();
+      });
+
+      this.get("/hotels/:id", (schema, request) => {
+        const id = request.params.id;
         return schema.hotels.all();
       });
 

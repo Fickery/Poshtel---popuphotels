@@ -8,7 +8,6 @@ nav {
   display: flex;
   width: 35%;
   justify-content: space-between;
-  /* background-color: rgb(238, 232, 232); */
 }
 
 .header-link_btn,
